@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+    .textColor {
+      color: #64dcdd;
+    }
+  
+    .trans {
+      transition: 1s ease-in-out;
+    }
+  
+    .flex-all {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .bi {
+      color: whitesmoke;
+      font-size: 16px;
+    }
+  
+    .flex-bet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .letter {
+      letter-spacing: 1px;
+    }
+  
+    .flex-colm {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+  
+    .space {
+      word-spacing: 5px;
+    }
+    .shadow{
+      filter: drop-shadow(0 0 5px #64dcdd);
+    }
+    .snap{
+      scroll-snap-type: y mandatory;
+      overflow-y:scroll ;
+      /* height: 100vh; */
+    }
+  }
