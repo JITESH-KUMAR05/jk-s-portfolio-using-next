@@ -2,12 +2,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Logo from "../public/fav3.jpg"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "JK's World",
   description: "Get to know JK's World",
+  // set the favicon as Logo
+  
 };
 
 export default function RootLayout({ children }) {

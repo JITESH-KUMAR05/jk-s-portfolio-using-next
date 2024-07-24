@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import professional2 from '../public/professional2.jpg';
+import Logo from '../public/animated/Logo.gif';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -54,19 +55,19 @@ const Navbar = () => {
                                 </button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex flex-shrink-0 items-center">
+                                <div className="flex w-28 h-full flex-shrink-0 items-center">
                                     {/* this is the logo */}
-                                    <img
-                                        className="block h-8 w-auto lg:hidden"
+                                    <Image
+                                        className="block size-32 lg:hidden"
 
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                        alt="Your Company"
-                                    />
-                                    <img
-                                        className="hidden h-8 w-auto lg:block"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                                        alt="Your Company"
-                                    />
+                                        src={Logo}
+                                        alt="Your Company"></Image>
+                                    
+                                    <Image
+                                        className="hidden h-14 w-24 lg:block"
+                                        src={Logo}
+                                        alt="Your Company"></Image>
+                                   
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
@@ -178,7 +179,7 @@ const Navbar = () => {
                                         >
                                             <span className="sr-only">Open user menu</span>
                                             <Image
-                                                className="h-12 w-12 object-cover rounded-full"
+                                                className="h-10 w-10 object-cover rounded-full"
                                                 src={professional2}
                                                 alt="hey"
                                                 ></Image>
