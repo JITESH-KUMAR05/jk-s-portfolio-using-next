@@ -9,21 +9,27 @@ import Link from 'next/link';
 const Hero = () => {
   const images = [professional1, professional2, professional3]; // Array of images
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Function to go to the next image
   const nextImageHandler = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+        setIsAnimating(false);
+      }, 500); // Duration should match the animation duration
+    }
   };
 
   // Automatically change the image every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextImageHandler();
-    }, 2000);
+    }, 3000); // Image changes every 3 seconds
 
-    // Clean up the interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
@@ -49,18 +55,26 @@ const Hero = () => {
           </button>
         </Link>
       </div>
-      <div className="right flex items-center w-[40%] h-[80%] overflow-hidden">
-        <Image
-          className='w-full h-full object-cover rounded-xl'
-          src={images[currentIndex]}
-          alt="Slideshow Image"
-        />
-        <button
-          onClick={nextImageHandler}
-          className='ml-4 p-2 bg-rose-600 text-white rounded-full hover:bg-rose-700 transition duration-300'
-        >
-          Next Image
-        </button>
+      <div className="right relative flex items-center w-[40%] h-[80%] overflow-hidden">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
+              index === currentIndex
+                ? 'translate-x-0'
+                : index < currentIndex
+                ? '-translate-x-full'
+                : 'translate-x-full'
+            }`}
+          >
+            <Image
+              className='w-full h-full object-cover rounded-xl'
+              src={image}
+              alt={`Slideshow Image ${index + 1}`}
+            />
+          </div>
+        ))}
+        
       </div>
     </div>
   );

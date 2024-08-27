@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import SendEmailButton from '@/components/SendEmailButton';
 
-const Talk = () => {
+const Page = () => {
   return (
     <div>
-      <h1>This is page where you can reach out to me </h1>
+      <SendEmailButton />
     </div>
-  )
-}
+  );
+};
 
-export default Talk
+export default Page;
