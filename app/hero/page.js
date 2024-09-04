@@ -59,7 +59,7 @@ const Hero = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
+            className={`absolute w-full h-full  p-5 transition-transform duration-500 rounded-3xl ease-in-out ${
               index === currentIndex
                 ? 'translate-x-0'
                 : index < currentIndex
@@ -68,7 +68,7 @@ const Hero = () => {
             }`}
           >
             <Image
-              className='w-full h-full object-cover rounded-xl'
+              className='w-full h-full object-cover rounded-3xl'
               src={image}
               alt={`Slideshow Image ${index + 1}`}
             />

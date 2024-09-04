@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-gray-100" >
+            <div className="bg-gray-100 fixed navbar-animation w-full z-[1] " >
                 <nav className="bg-gray-800">
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 p-5 items-center justify-between">
@@ -110,8 +110,8 @@ const Navbar = () => {
 
 
                                 {/* Profile dropdown */}
-                                <div className="relative ml-3">
-                                    <div className='flex items-center justify-center gap-3'>
+                                <div className=" flex gap-3 relative ml-3">
+                                    <div className=' hidden  md:flex items-center justify-center gap-3'>
                                         <ul className="flex  gap-5">
 
 
@@ -169,7 +169,9 @@ const Navbar = () => {
                                         </ul>
                                         {/* if i click somewhere else other than this button then dropdown should dissaper */}
                                         
-                                        <button
+                                        
+                                    </div>
+                                    <button
                                             type="button"
                                             className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                             id="user-menu-button"
@@ -185,7 +187,6 @@ const Navbar = () => {
                                                 ></Image>
                                            
                                         </button>
-                                    </div>
 
                                     <div
                                         className={`${open ? 'block' : 'hidden'
