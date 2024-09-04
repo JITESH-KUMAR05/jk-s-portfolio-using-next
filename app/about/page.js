@@ -27,7 +27,7 @@ const About = () => {
           </button></Link>
         </div>
         <div className='w-1/2 lg:mt-[-14rem] '>
-          <Image className='w-full' src={engineer}></Image>
+          <Image className='w-full' src={engineer} alt='image' ></Image>
         </div>
       </div>
 

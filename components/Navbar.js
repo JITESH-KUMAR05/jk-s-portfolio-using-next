@@ -183,7 +183,7 @@ const Navbar = () => {
                                             <Image
                                                 className="h-10 w-10 object-cover rounded-full"
                                                 src={professional2}
-                                                alt="hey"
+                                                alt="myimg"
                                                 ></Image>
                                            
                                         </button>
