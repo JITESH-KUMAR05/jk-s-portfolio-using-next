@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import PreLoader from "@/components/PreLoader";
 import About from "./about/page";
 import Projects from "./projects/page";
+import Connect from "./connect/page";
+import Talk from "./talk/page";
 
 export default function Home() {
   return (
@@ -13,6 +15,9 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Connect />
+      <Talk />
+
 
     </div>
 

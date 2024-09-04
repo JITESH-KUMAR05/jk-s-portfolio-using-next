@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import professional2 from '../public/professional2.jpg';
-import Logo from '../public/animated/Logo.gif';
+import Logo from '../public/logosvg.svg';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -10,10 +10,10 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-gray-100" >
+            <div className="bg-gray-100 fixed navbar-animation w-full z-[1] " >
                 <nav className="bg-gray-800">
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                        <div className="relative flex h-16 items-center justify-between">
+                        <div className="relative flex h-16 p-5 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button */}
                                 <button
@@ -55,16 +55,16 @@ const Navbar = () => {
                                 </button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex w-28 h-full flex-shrink-0 items-center">
+                                <div className="flex  w-32 h-[2.5rem] text-white flex-shrink-0 items-center ">
                                     {/* this is the logo */}
                                     <Image
-                                        className="block size-32 lg:hidden"
+                                        className="block w-full  lg:hidden"
 
                                         src={Logo}
                                         alt="Your Company"></Image>
                                     
                                     <Image
-                                        className="hidden h-14 w-24 lg:block"
+                                        className="hidden h-[4rem] w-[8.5rem] lg:block"
                                         src={Logo}
                                         alt="Your Company"></Image>
                                    
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         <Link
-                                            href="#"
+                                            href="/"
                                             className=" hover:bg-gray-700 text-white rounded-md px-3 py-2 text-sm font-medium"
                                             aria-current="page"
                                         >
@@ -85,20 +85,20 @@ const Navbar = () => {
                                             Team
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="/projects"
                                             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                         >
                                             Projects
                                         </Link>
                                         <Link
-                                            href="#"
+                                            href="/connect"
                                             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                         >
                                             Connect
                                         </Link>
 
                                         <Link
-                                            href="#"
+                                            href="/talk"
                                             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
                                         >
                                             Let's Talk
@@ -110,8 +110,8 @@ const Navbar = () => {
 
 
                                 {/* Profile dropdown */}
-                                <div className="relative ml-3">
-                                    <div className='flex items-center justify-center gap-3'>
+                                <div className=" flex gap-3 relative ml-3">
+                                    <div className=' hidden  md:flex items-center justify-center gap-3'>
                                         <ul className="flex  gap-5">
 
 
@@ -169,7 +169,9 @@ const Navbar = () => {
                                         </ul>
                                         {/* if i click somewhere else other than this button then dropdown should dissaper */}
                                         
-                                        <button
+                                        
+                                    </div>
+                                    <button
                                             type="button"
                                             className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                             id="user-menu-button"
@@ -181,11 +183,10 @@ const Navbar = () => {
                                             <Image
                                                 className="h-10 w-10 object-cover rounded-full"
                                                 src={professional2}
-                                                alt="hey"
+                                                alt="myimg"
                                                 ></Image>
                                            
                                         </button>
-                                    </div>
 
                                     <div
                                         className={`${open ? 'block' : 'hidden'
