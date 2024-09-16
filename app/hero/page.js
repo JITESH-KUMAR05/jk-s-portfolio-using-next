@@ -34,48 +34,79 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className='text-white lg:w-[98.9vw] flex m-auto gap-8 justify-center items-center md:w-[98.3vw] sm:w-[90vw] lg:h-[91.9vh] md:h-[90vh] sm:h-[80vh]'>
-      <div className="italic font-serif text-6xl md:py-14 left w-[40%] h-[80%]">
-        <h1 className='font-extrabold flex gap-1'>
-          <span className='text-green-400'>He</span>
-          <span>ll</span>
-          <span>o</span>
-          <span>!</span>
-        </h1>
-        <h1>I am </h1>
-        <h1 className='text-7xl text-red-600 font-bold'>Jitesh Kumar</h1>
-        <p>I&apos;m a Web Developer</p>
+    <div>
+      <div className='hidden md:block'>
+        <div className='text-white lg:w-[98.9vw] flex m-auto gap-8 justify-center items-center md:w-[98.3vw] sm:w-[90vw] lg:h-[91.9vh] md:h-[90vh] sm:h-[80vh]'>
+          <div className="italic font-serif text-6xl md:py-14 left w-[40%] h-[80%]">
+            <h1 className='font-extrabold flex gap-1'>
+              <span className='text-green-400'>He</span>
+              <span>ll</span>
+              <span>o</span>
+              <span>!</span>
+            </h1>
+            <h1>I am </h1>
+            <h1 className='text-7xl text-red-600 font-bold'>Jitesh Kumar</h1>
+            <p>I&apos;m a Web Developer</p>
 
-        <Link
-          className=''
-          href={'https://drive.google.com/file/d/1G6lkdxCgRJlyqSQyVmqrHjQsRXIz9sMj/view?usp=sharing'}
-          target='_blank'
-        >
-          <button className="cursor-pointer w-1/2 inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-rose-600 hover:text-white border-2 border-rose-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-rose-600 duration-300 focus:bg-transparent mt-[3rem]">
-            Download CV
-          </button>
-        </Link>
-      </div>
-      <div className="right relative flex items-center w-[40%] h-[80%] overflow-hidden">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute w-full h-full  p-5 transition-transform duration-500 rounded-3xl ease-in-out ${
-              index === currentIndex
-                ? 'translate-x-0'
-                : index < currentIndex
-                ? '-translate-x-full'
-                : 'translate-x-full'
-            }`}
-          >
-            <Image
-              className='w-full h-full object-cover rounded-3xl'
-              src={image}
-              alt={`Slideshow Image ${index + 1}`}
-            />
+            <Link
+              className=''
+              href={'https://drive.google.com/file/d/1G6lkdxCgRJlyqSQyVmqrHjQsRXIz9sMj/view?usp=sharing'}
+              target='_blank'
+            >
+              <button className="cursor-pointer w-1/2 inline-flex items-center rounded-full px-9 py-3 text-xl font-mono font-semibold text-rose-600 hover:text-white border-2 border-rose-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-rose-600 duration-300 focus:bg-transparent mt-[3rem]">
+                Download CV
+              </button>
+            </Link>
           </div>
-        ))}
-        
+          <div className="right relative flex items-center w-[40%] h-[80%] overflow-hidden">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute w-full h-full  p-5 transition-transform duration-500 rounded-3xl ease-in-out ${index === currentIndex
+                  ? 'translate-x-0'
+                  : index < currentIndex
+                    ? '-translate-x-full'
+                    : 'translate-x-full'
+                  }`}
+              >
+                <Image
+                  className='w-full h-full object-cover rounded-3xl'
+                  src={image}
+                  alt={`Slideshow Image ${index + 1}`}
+                />
+              </div>
+            ))}
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div className='md:hidden px-20 py-[6rem]  '>
+        <div className='flex flex-col justify-center items-center gap-8'>
+        <div className='w-[90%]'>
+            <Image className='w-full rounded-full size-[14rem] object-cover' src={professional1}></Image>
+          </div>
+
+
+          <div className='w-[90%] text-2xl'>
+            <h1 className='font-extrabold flex gap-1'>
+              <span className='text-green-400'>He</span>
+              <span>ll</span>
+              <span>o</span>
+              <span>!</span>
+            </h1>
+            <h1>I am </h1>
+            <h1 className=' text-red-600 font-bold'>Jitesh Kumar</h1>
+            <p>I&apos;m a Web Developer</p>
+          </div>
+          
+        </div>
+
+
       </div>
     </div>
   );
