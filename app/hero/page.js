@@ -44,7 +44,8 @@ const Hero = () => {
         </h1>
         <h1>I am </h1>
         <h1 className='text-7xl text-red-600 font-bold'>Jitesh Kumar</h1>
-        <p>I am a Web Developer</p>
+        <p>I&apos;m a Web Developer</p>
+
         <Link
           className=''
           href={'https://drive.google.com/file/d/1G6lkdxCgRJlyqSQyVmqrHjQsRXIz9sMj/view?usp=sharing'}
