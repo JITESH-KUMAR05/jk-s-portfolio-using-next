@@ -85,22 +85,26 @@ const Hero = () => {
 
       </div>
 
-      <div className='md:hidden px-20 py-[6rem]  '>
+      <div className='md:hidden px-12 py-[7rem]  '>
         <div className='flex flex-col justify-center items-center gap-8'>
         <div className='w-[90%]'>
-            <Image className='w-full rounded-full size-[14rem] object-cover' src={professional1}></Image>
+            <Image className='w-full rounded-full size-[16rem] object-cover' src={professional1}></Image>
           </div>
 
 
-          <div className='w-[90%] text-2xl'>
+          <div className='w-[90%] py-5 px-5 text-3xl'>
             <h1 className='font-extrabold flex gap-1'>
               <span className='text-green-400'>He</span>
               <span>ll</span>
               <span>o</span>
               <span>!</span>
+              <span className='px-3'>👋</span>
             </h1>
+            <div className='flex gap-2'>
             <h1>I am </h1>
-            <h1 className=' text-red-600 font-bold'>Jitesh Kumar</h1>
+            <h1 className='text-red-600 font-bold'> Jitesh </h1>
+            </div>
+            <h1 className=' text-red-600 font-bold'>Kumar</h1>
             <p>I&apos;m a Web Developer</p>
           </div>
           
