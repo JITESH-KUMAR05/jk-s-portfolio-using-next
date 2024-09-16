@@ -54,17 +54,19 @@ const Navbar = () => {
                                     </svg>
                                 </button>
                             </div>
+
+
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="flex w-32 h-[2.5rem] text-white flex-shrink-0 items-center">
                                     {/* Company Logo for Mobile */}
                                     <Image
-                                        className="block w-full lg:hidden"
+                                        className=" w-full hidden"
                                         src={Logo}
                                         alt="Your Company Logo"
                                     />
                                     {/* Company Logo for Desktop */}
                                     <Image
-                                        className="hidden h-[4rem] w-[8.5rem] lg:block"
+                                        className="hidden h-[4rem] w-[8.5rem] md:block"
                                         src={Logo}
                                         alt="Your Company Logo"
                                     />
