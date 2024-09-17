@@ -7,7 +7,7 @@ const Projects = () => {
         <div className='lg:p-20' >
             <h1 className=' text-4xl p-5 font-bold '>My Projects</h1>
 
-            <div className='w-full h-full flex justify-center'>
+            <div className='w-full h-full p-4 md:p-0 flex justify-center'>
 
                 <div className="flex w-full border rounded-lg h-full justify-center gap-8 p-5 flex-wrap ">
                     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

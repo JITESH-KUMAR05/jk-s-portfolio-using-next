@@ -8,7 +8,7 @@ const Connect = () => {
 
             <h1 className=' text-4xl p-5 font-bold '>Connect Me</h1>
 
-            <div className='w-full h-full flex justify-center'>
+            <div className='w-full p-4 md:p-0 h-full flex justify-center'>
 
                 <div className="flex w-full border rounded-lg h-full justify-center gap-8 p-5 flex-wrap ">
 
