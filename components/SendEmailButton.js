@@ -23,7 +23,7 @@ const SendEmailButton = () => {
     };
 
     return (
-        <div className='w-full mx-auto px-20'>
+        <div className='w-full md:mx-auto md:px-20'>
             <h1 className='text-4xl p-5 font-bold text-white'>Contact Me</h1>
             <div className="flex  w-full justify-center items-center">
                 <div className=" w-full flex justify-center p-3   text-white">
