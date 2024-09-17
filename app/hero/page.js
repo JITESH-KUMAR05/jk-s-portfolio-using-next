@@ -34,10 +34,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div>
-      <div className='hidden md:block'>
-        <div className='text-white lg:w-[98.9vw] flex m-auto gap-8 justify-center items-center md:w-[98.3vw] sm:w-[90vw] lg:h-[91.9vh] md:h-[90vh] sm:h-[80vh]'>
-          <div className="italic font-serif text-6xl md:py-14 left w-[40%] h-[80%]">
+    <div className='w-full h-screen'>
+      <div className='hidden md:block '>
+        <div className='text-white lg:w-[98.9vw] flex py-10 m-auto gap-8 justify-center items-center md:w-[98.3vw] sm:w-[90vw] lg:h-[91.9vh] md:h-[90vh] sm:h-[80vh]'>
+          <div className="italic font-serif text-6xl md:py-14 left w-[35%] h-[80%]">
             <h1 className='font-extrabold flex gap-1'>
               <span className='text-green-400'>He</span>
               <span>ll</span>
@@ -58,7 +58,7 @@ const Hero = () => {
               </button>
             </Link>
           </div>
-          <div className="right relative flex items-center w-[40%] h-[80%] overflow-hidden">
+          <div className="right relative flex items-center w-[35%] h-[90%] overflow-hidden">
             {images.map((image, index) => (
               <div
                 key={index}
@@ -88,7 +88,7 @@ const Hero = () => {
       <div className='md:hidden px-12 py-[7rem]  '>
         <div className='flex flex-col justify-center items-center gap-8'>
         <div className='w-[90%]'>
-            <Image className='w-full rounded-full size-[16rem] object-cover' src={professional1}></Image>
+            <Image className='w-full rounded-full size-[16rem] object-cover' alt='"this is my image' src={professional1}></Image>
           </div>
 
 
