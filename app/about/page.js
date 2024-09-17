@@ -6,10 +6,10 @@ import engineer from '../../public/animated/engineer.gif'
 
 const About = () => {
   return (
-    <div className='w-full md:px-20 p-3 md:py-6 '>
-      <h1 className=' text-4xl p-5 font-bold '>About me</h1>
-      <div className='w-full flex flex-col md:flex-row  md:h-[82vh] p-5  md:p-7 border rounded-2xl md:overflow-hidden '>
-        <div className="md:w-1/2 overflow-scroll py-4 md:py-0 text-xl h-full flex flex-col gap-6 justify-center  md:px-5">
+    <div className='w-full lg:px-20 p-3 lg:py-6 '>
+      <h1 className=' md:text-4xl p-5 font-bold '>About me</h1>
+      <div className='w-full flex flex-col lg:flex-row   lg:h-[82vh] p-5  lg:p-7 border rounded-2xl md:overflow-hidden '>
+        <div className="lg:w-1/2 overflow-scroll md:overflow-visible lg:overflow-visible py-4 lg:py-0 text-xl h-full flex flex-col gap-6 justify-center  md:px-5">
           <div className=' h-full w-full '>
             <p>As an ambitious engineering student specializing in IT, I bring a versatile skill set and a proactive attitude to the table. My technical proficiency spans Python, JavaScript, HTML, CSS, React.js, Tailwind CSS, Bootstrap CSS, Next.js, and C. Passionate about innovation and continuous learning, I thrive in dynamic environments and am eager to take on new challenges.</p>
           </div>
@@ -26,7 +26,7 @@ const About = () => {
             </button>
           </Link>
         </div>
-        <div className='md:w-1/2 p-7 md:p-0 lg:mt-[-14rem] '>
+        <div className='lg:w-1/2 p-7 md:hidden lg:block lg:p-0  lg:mt-[-14rem] '>
           <Image className='w-full' src={engineer} alt='image' ></Image>
         </div>
       </div>
